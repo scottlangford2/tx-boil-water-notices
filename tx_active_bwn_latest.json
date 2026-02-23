@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-23T18:57:27.834133",
-  "total_notices": 7,
+  "last_updated": "2026-02-23T19:01:44.431976",
+  "total_notices": 8,
   "notices": [
     {
       "entity_name": "Consolidated WSC - Boil Water Notice 1130033 Oak Grove Area",
@@ -81,10 +81,22 @@
       "notice_text": "Sonora residents under boil water notice after pressure drop",
       "date": "",
       "source": "Bing News",
-      "source_url": "https://www.conchovalleyhomepage.com/news/top-stories/boil-water-sonora-texas/",
+      "source_url": "https://www.yahoo.com/news/articles/sonora-residents-under-boil-water-165422892.html",
       "entity_url": "",
       "lat": 30.5668,
       "lon": -100.6431
+    },
+    {
+      "entity_name": "Boil Water Notice issued for Deadwood",
+      "entity_type": "Water System",
+      "status": "Reported Active (News)",
+      "notice_text": "Boil Water Notice issued for Deadwood Water Supply: February 16",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://www.panolawatchman.com/2026/02/16/02182026_pan_news_boilnotice/",
+      "entity_url": "",
+      "lat": 31.0,
+      "lon": -99.0
     }
   ]
 }
