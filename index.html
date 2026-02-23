@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Active Boil Water Notices</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; }
+
+        #header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 2px solid #334155;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        #header h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #header h1 .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #ef4444; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        #header-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+        #header-meta .count {
+            background: #ef4444;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        #container { display: flex; height: calc(100vh - 64px); }
+
+        #sidebar {
+            width: 380px;
+            min-width: 320px;
+            background: #1e293b;
+            border-right: 1px solid #334155;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+        #sidebar-header {
+            padding: 16px;
+            border-bottom: 1px solid #334155;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+        .notice-card {
+            padding: 14px 16px;
+            border-bottom: 1px solid #1e293b;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .notice-card:hover { background: #334155; }
+        .notice-card.active-card { background: #334155; border-left: 3px solid #ef4444; }
+        .notice-card .entity-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: #f1f5f9;
+            margin-bottom: 4px;
+        }
+        .notice-card .entity-type {
+            font-size: 11px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        .notice-card .notice-detail {
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .notice-card .notice-date {
+            font-size: 11px;
+            color: #f59e0b;
+            margin-top: 6px;
+        }
+        .status-badge {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .status-active { background: rgba(239, 68, 68, 0.2); color: #fca5a5; }
+        .status-reported { background: rgba(245, 158, 11, 0.2); color: #fcd34d; }
+
+        #map { flex: 1; }
+
+        .leaflet-popup-content-wrapper {
+            background: #1e293b;
+            color: #e2e8f0;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        .leaflet-popup-tip { background: #1e293b; }
+        .leaflet-popup-content {
+            margin: 12px 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 13px;
+            line-height: 1.5;
+            max-width: 320px;
+        }
+        .popup-title { font-weight: 700; font-size: 15px; color: #f8fafc; margin-bottom: 4px; }
+        .popup-type { font-size: 11px; color: #64748b; text-transform: uppercase; margin-bottom: 8px; }
+        .popup-text { color: #94a3b8; margin-bottom: 8px; max-height: 100px; overflow-y: auto; }
+        .popup-link { color: #60a5fa; text-decoration: none; font-size: 12px; }
+        .popup-link:hover { text-decoration: underline; }
+        .popup-date { color: #f59e0b; font-size: 12px; margin-bottom: 4px; }
+
+        #loading {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background: #1e293b;
+            padding: 24px 32px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        #loading .spinner {
+            width: 32px; height: 32px;
+            border: 3px solid #334155;
+            border-top-color: #ef4444;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 12px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        #error {
+            display: none;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background: #1e293b;
+            padding: 24px 32px;
+            border-radius: 12px;
+            border: 1px solid #ef4444;
+            text-align: center;
+            max-width: 400px;
+        }
+        #error h3 { color: #fca5a5; margin-bottom: 8px; }
+        #error p { color: #94a3b8; font-size: 13px; line-height: 1.5; }
+        #error code { background: #0f172a; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+
+        @media (max-width: 768px) {
+            #container { flex-direction: column; }
+            #sidebar { width: 100%; height: 40vh; min-width: auto; }
+            #map { height: 60vh; }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1><span class="dot"></span> Texas Boil Water Notices</h1>
+        <div id="header-meta">
+            <span id="notice-count" class="count">--</span>
+            <span id="last-updated">Loading...</span>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="sidebar">
+            <div id="sidebar-header">Active boil water notices across Texas</div>
+            <div id="notice-list"></div>
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <div id="loading">
+        <div class="spinner"></div>
+        <div>Loading boil water notices...</div>
+    </div>
+
+    <div id="error">
+        <h3>Could not load data</h3>
+        <p>Make sure to run the scraper first:<br><code>python3 tx_boil_water_scraper.py</code><br><br>
+        Then serve this directory:<br><code>python3 -m http.server 8000</code><br><br>
+        And open <a href="http://localhost:8000" style="color:#60a5fa">http://localhost:8000</a></p>
+    </div>
+
+    <script>
+    (function() {
+        // Initialize map centered on Texas
+        const map = L.map('map', {
+            center: [31.0, -99.5],
+            zoom: 6,
+            zoomControl: true,
+        });
+
+        // Dark tile layer
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Custom marker icons
+        function makeIcon(color) {
+            return L.divIcon({
+                className: 'custom-marker',
+                html: `<div style="
+                    width: 14px; height: 14px;
+                    background: ${color};
+                    border: 2px solid white;
+                    border-radius: 50%;
+                    box-shadow: 0 0 8px ${color}88, 0 2px 6px rgba(0,0,0,0.4);
+                "></div>`,
+                iconSize: [14, 14],
+                iconAnchor: [7, 7],
+                popupAnchor: [0, -10],
+            });
+        }
+
+        const redIcon = makeIcon('#ef4444');
+        const orangeIcon = makeIcon('#f59e0b');
+        const markers = [];
+
+        function statusBadge(status) {
+            const isActive = status.toLowerCase().includes('active') && !status.toLowerCase().includes('news') && !status.toLowerCase().includes('reported') && !status.toLowerCase().includes('web');
+            const cls = isActive ? 'status-active' : 'status-reported';
+            return `<span class="status-badge ${cls}">${status}</span>`;
+        }
+
+        function isConfirmed(status) {
+            const s = status.toLowerCase();
+            return s === 'active' || s === 'possibly active';
+        }
+
+        function renderNotices(data) {
+            const notices = data.notices || [];
+            const lastUpdated = data.last_updated || 'Unknown';
+
+            // Update header
+            document.getElementById('notice-count').textContent = notices.length;
+            const dt = new Date(lastUpdated);
+            document.getElementById('last-updated').textContent = `Updated: ${dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' })}`;
+
+            // Build sidebar and markers
+            const listEl = document.getElementById('notice-list');
+            listEl.innerHTML = '';
+
+            if (notices.length === 0) {
+                listEl.innerHTML = '<div style="padding:24px;text-align:center;color:#64748b;">No active boil water notices found.</div>';
+                return;
+            }
+
+            const bounds = [];
+
+            notices.forEach((n, i) => {
+                // Sidebar card
+                const card = document.createElement('div');
+                card.className = 'notice-card';
+                card.dataset.index = i;
+                card.innerHTML = `
+                    <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:4px;">
+                        <div class="entity-name">${escHtml(n.entity_name)}</div>
+                        ${statusBadge(n.status)}
+                    </div>
+                    <div class="entity-type">${escHtml(n.entity_type)}</div>
+                    <div class="notice-detail">${escHtml(n.notice_text)}</div>
+                    ${n.date ? `<div class="notice-date">${escHtml(n.date)}</div>` : ''}
+                `;
+                listEl.appendChild(card);
+
+                // Map marker
+                if (n.lat && n.lon) {
+                    const icon = isConfirmed(n.status) ? redIcon : orangeIcon;
+                    const marker = L.marker([n.lat, n.lon], { icon }).addTo(map);
+
+                    const sourceLink = n.source_url ? `<a class="popup-link" href="${escHtml(n.source_url)}" target="_blank" rel="noopener">View source &rarr;</a>` : '';
+
+                    marker.bindPopup(`
+                        <div class="popup-title">${escHtml(n.entity_name)}</div>
+                        <div class="popup-type">${escHtml(n.entity_type)}</div>
+                        ${n.date ? `<div class="popup-date">${escHtml(n.date)}</div>` : ''}
+                        <div class="popup-text">${escHtml(n.notice_text)}</div>
+                        ${sourceLink}
+                    `, { maxWidth: 340 });
+
+                    markers.push(marker);
+                    bounds.push([n.lat, n.lon]);
+
+                    // Click card -> fly to marker
+                    card.addEventListener('click', () => {
+                        map.flyTo([n.lat, n.lon], 10, { duration: 0.8 });
+                        marker.openPopup();
+                        document.querySelectorAll('.notice-card').forEach(c => c.classList.remove('active-card'));
+                        card.classList.add('active-card');
+                    });
+
+                    // Click marker -> highlight card
+                    marker.on('click', () => {
+                        document.querySelectorAll('.notice-card').forEach(c => c.classList.remove('active-card'));
+                        card.classList.add('active-card');
+                        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    });
+                }
+            });
+
+            // Fit map to markers
+            if (bounds.length > 0) {
+                map.fitBounds(bounds, { padding: [40, 40], maxZoom: 8 });
+            }
+        }
+
+        function escHtml(str) {
+            if (!str) return '';
+            return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+        }
+
+        // Load data
+        fetch('tx_active_bwn_latest.json')
+            .then(r => {
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
+                return r.json();
+            })
+            .then(data => {
+                document.getElementById('loading').style.display = 'none';
+                renderNotices(data);
+            })
+            .catch(err => {
+                console.error('Failed to load data:', err);
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').style.display = 'block';
+            });
+    })();
+    </script>
+</body>
+</html>

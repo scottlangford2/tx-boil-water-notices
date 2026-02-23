@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude/
+
+# Timestamped output files (only keep latest.json for the site)
+tx_active_bwn_2*.csv
+tx_active_bwn_2*.json
+tx_bwn_entities_*.csv
+tx_bwn_entities_*.json
+tx_bwn_entities_flagged_*.csv
+tx_bwn_entities_flagged_*.json
+
+# Logs
+*.log
+scraper.log

@@ -1,0 +1,90 @@
+{
+  "last_updated": "2026-02-23T12:48:26.775087",
+  "total_notices": 7,
+  "notices": [
+    {
+      "entity_name": "Consolidated WSC - Boil Water Notice 1130033 Oak Grove Area",
+      "entity_type": "Water Supply Corporation (WSC)",
+      "status": "Active",
+      "notice_text": "Boil Water Notice 1130033 Oak Grove Area. February 20, 2026 Due to a line break, customers in the Oak Grove area need to boil their water until further notice. This area includes customers on CR 2300 between CR 2330 and 2305, as well as customers on CR's 2330, 2340, and 2345.John Owens 936-544-2986",
+      "date": "February 20, 2026",
+      "source": "Consolidated WSC",
+      "source_url": "https://consolidatedwsc.com/alerts",
+      "entity_url": "https://consolidatedwsc.com/alerts",
+      "lat": 31.4,
+      "lon": -95.5
+    },
+    {
+      "entity_name": "Consolidated WSC - Boil Water Notice 1130033 Tadmor Area",
+      "entity_type": "Water Supply Corporation (WSC)",
+      "status": "Active",
+      "notice_text": "Boil Water Notice 1130033 Tadmor Area. February 20, 2026 Due to a line break, customers in the Tadmor area need to boil their water until further notice. This area includes customer on CR's 1090, 1095, 1100, 1150, PR 5105, and FSR's 513 and 521 W.John Owens 936-544-2986",
+      "date": "February 20, 2026",
+      "source": "Consolidated WSC",
+      "source_url": "https://consolidatedwsc.com/alerts",
+      "entity_url": "https://consolidatedwsc.com/alerts",
+      "lat": 31.35,
+      "lon": -95.25
+    },
+    {
+      "entity_name": "Consolidated WSC - Boil Water Notice 1130031 Pine Mountain Area",
+      "entity_type": "Water Supply Corporation (WSC)",
+      "status": "Active",
+      "notice_text": "Boil Water Notice 1130031 Pine Mountain Area. February 18, 2026 Due to a line break, customers on the Pine Mountain system need to boil their water until further notice. This area includes customers on FM 2076 from Loop 304, going West for 4 miles, Hwy 7 between CR 2000 and CR 3020, Hwy 21 from CR 3105, going West for 1 mile, FM 229 from Loop 3",
+      "date": "February 18, 2026",
+      "source": "Consolidated WSC",
+      "source_url": "https://consolidatedwsc.com/alerts",
+      "entity_url": "https://consolidatedwsc.com/alerts",
+      "lat": 31.45,
+      "lon": -95.4
+    },
+    {
+      "entity_name": "Marshall",
+      "entity_type": "Water System",
+      "status": "Reported Active (News)",
+      "notice_text": "Boil water notice issued for some Marshall residents",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://www.yahoo.com/news/articles/boil-water-notice-issued-marshall-164121615.html",
+      "entity_url": "",
+      "lat": 32.5449,
+      "lon": -94.3674
+    },
+    {
+      "entity_name": "Monterey",
+      "entity_type": "Water System",
+      "status": "Reported Active (News)",
+      "notice_text": "Boil water notice issued in parts of Monterey after broken line repaired",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://www.msn.com/en-us/autos/other/boil-water-notice-issued-in-parts-of-monterey-after-broken-line-repaired/vi-AA1WRySt?ocid=BingNewsVerp",
+      "entity_url": "",
+      "lat": 32.4487,
+      "lon": -101.9
+    },
+    {
+      "entity_name": "Gilmer",
+      "entity_type": "Water System",
+      "status": "Reported Active (News)",
+      "notice_text": "Boil water notice issued for customers in Gilmer",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://www.kltv.com/2026/02/19/boil-water-notice-issued-customers-gilmer/",
+      "entity_url": "",
+      "lat": 32.7288,
+      "lon": -94.9424
+    },
+    {
+      "entity_name": "Sonora",
+      "entity_type": "Water System",
+      "status": "Reported Active (News)",
+      "notice_text": "Sonora residents under boil water notice after pressure drop",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://www.conchovalleyhomepage.com/news/top-stories/boil-water-sonora-texas/",
+      "entity_url": "",
+      "lat": 30.5668,
+      "lon": -100.6431
+    }
+  ]
+}
