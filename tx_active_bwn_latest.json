@@ -1,7 +1,21 @@
 {
-  "last_updated": "2026-02-23T19:01:44.431976",
-  "total_notices": 8,
+  "last_updated": "2026-02-24T13:29:30.598646",
+  "total_notices": 7,
   "notices": [
+    {
+      "entity_name": "Benbrook Hills",
+      "entity_type": "Water System",
+      "status": "Alert",
+      "notice_text": "Tarrant - Customers may experience little to no water over night while we are looking for a leak. Customers are also being placed under a boil water notice until we get test results back from the lab. - Alert",
+      "date": "",
+      "source": "SWWC Dashboard",
+      "source_url": "https://www.swwc.com/texas/neighborhood-dashboard/",
+      "entity_url": "",
+      "county": "Tarrant",
+      "neighborhood": "Customers may experience little to no water over night while we are looking for a leak. Customers are also being placed under a boil water notice until we get test results back from the lab.",
+      "lat": 31.0,
+      "lon": -99.0
+    },
     {
       "entity_name": "Consolidated WSC - Boil Water Notice 1130033 Oak Grove Area",
       "entity_type": "Water Supply Corporation (WSC)",
@@ -42,25 +56,25 @@
       "entity_name": "Marshall",
       "entity_type": "Water System",
       "status": "Reported Active (News)",
-      "notice_text": "Boil water notice issued for some Marshall residents",
+      "notice_text": "Boil water notice issued for some Marshall residents after water main break",
       "date": "",
       "source": "Bing News",
-      "source_url": "https://www.yahoo.com/news/articles/boil-water-notice-issued-marshall-164121615.html",
+      "source_url": "https://www.kltv.com/2026/02/23/boil-water-notice-issued-some-marshall-residents-after-water-main-break/",
       "entity_url": "",
       "lat": 32.5449,
       "lon": -94.3674
     },
     {
-      "entity_name": "Monterey",
-      "entity_type": "Water System",
+      "entity_name": "Unknown (see headline)",
+      "entity_type": "Unknown",
       "status": "Reported Active (News)",
-      "notice_text": "Boil water notice issued in parts of Monterey after broken line repaired",
+      "notice_text": "Boil water notice issued after Marshall water main break",
       "date": "",
       "source": "Bing News",
-      "source_url": "https://www.msn.com/en-us/autos/other/boil-water-notice-issued-in-parts-of-monterey-after-broken-line-repaired/vi-AA1WRySt?ocid=BingNewsVerp",
+      "source_url": "https://www.msn.com/en-us/news/news/boil-water-notice-issued-after-marshall-water-main-break/ar-AA1WRbtA?ocid=BingNewsVerp",
       "entity_url": "",
-      "lat": 32.4487,
-      "lon": -101.9
+      "lat": 31.0,
+      "lon": -99.0
     },
     {
       "entity_name": "Gilmer",
@@ -73,30 +87,6 @@
       "entity_url": "",
       "lat": 32.7288,
       "lon": -94.9424
-    },
-    {
-      "entity_name": "Sonora",
-      "entity_type": "Water System",
-      "status": "Reported Active (News)",
-      "notice_text": "Sonora residents under boil water notice after pressure drop",
-      "date": "",
-      "source": "Bing News",
-      "source_url": "https://www.yahoo.com/news/articles/sonora-residents-under-boil-water-165422892.html",
-      "entity_url": "",
-      "lat": 30.5668,
-      "lon": -100.6431
-    },
-    {
-      "entity_name": "Boil Water Notice issued for Deadwood",
-      "entity_type": "Water System",
-      "status": "Reported Active (News)",
-      "notice_text": "Boil Water Notice issued for Deadwood Water Supply: February 16",
-      "date": "",
-      "source": "Bing News",
-      "source_url": "https://www.panolawatchman.com/2026/02/16/02182026_pan_news_boilnotice/",
-      "entity_url": "",
-      "lat": 31.0,
-      "lon": -99.0
     }
   ]
 }
