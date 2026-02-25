@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-24T13:29:30.598646",
-  "total_notices": 7,
+  "last_updated": "2026-02-25T13:29:01.714247",
+  "total_notices": 9,
   "notices": [
     {
       "entity_name": "Benbrook Hills",
@@ -53,6 +53,54 @@
       "lon": -95.4
     },
     {
+      "entity_name": "Unknown (see headline)",
+      "entity_type": "Unknown",
+      "status": "Reported Active (News)",
+      "notice_text": "Boil water notice issued after Marshall water main break",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://www.yahoo.com/news/articles/marshall-losing-significant-amount-water-210641792.html",
+      "entity_url": "",
+      "lat": 31.0,
+      "lon": -99.0
+    },
+    {
+      "entity_name": "effect for some Llano",
+      "entity_type": "Water System",
+      "status": "Reported Active (News)",
+      "notice_text": "Boil water notice in effect for some Llano residents after water main break",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://www.kvue.com/article/news/local/llano-boil-water-notice-water-main-break/269-73104824-0746-4733-a78a-ab248a037110",
+      "entity_url": "",
+      "lat": 31.0,
+      "lon": -99.0
+    },
+    {
+      "entity_name": "Texarkana",
+      "entity_type": "Water System",
+      "status": "Reported Active (News)",
+      "notice_text": "ALERT | Boil water notice issued for part of Texarkana, Texas",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://www.texarkanagazette.com/news/2026/feb/24/alert-boil-water-notice-issued-for-part-of/",
+      "entity_url": "",
+      "lat": 33.4418,
+      "lon": -94.0477
+    },
+    {
+      "entity_name": "Llano",
+      "entity_type": "Water System",
+      "status": "Reported Active (News)",
+      "notice_text": "Boil water notice issued for some Llano residents after water main break",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://cbsaustin.com/news/local/boil-water-notice-issued-for-some-llano-residents-after-water-main-break",
+      "entity_url": "",
+      "lat": 30.6663312,
+      "lon": -98.6970374
+    },
+    {
       "entity_name": "Marshall",
       "entity_type": "Water System",
       "status": "Reported Active (News)",
@@ -63,30 +111,6 @@
       "entity_url": "",
       "lat": 32.5449,
       "lon": -94.3674
-    },
-    {
-      "entity_name": "Unknown (see headline)",
-      "entity_type": "Unknown",
-      "status": "Reported Active (News)",
-      "notice_text": "Boil water notice issued after Marshall water main break",
-      "date": "",
-      "source": "Bing News",
-      "source_url": "https://www.msn.com/en-us/news/news/boil-water-notice-issued-after-marshall-water-main-break/ar-AA1WRbtA?ocid=BingNewsVerp",
-      "entity_url": "",
-      "lat": 31.0,
-      "lon": -99.0
-    },
-    {
-      "entity_name": "Gilmer",
-      "entity_type": "Water System",
-      "status": "Reported Active (News)",
-      "notice_text": "Boil water notice issued for customers in Gilmer",
-      "date": "",
-      "source": "Bing News",
-      "source_url": "https://www.kltv.com/2026/02/19/boil-water-notice-issued-customers-gilmer/",
-      "entity_url": "",
-      "lat": 32.7288,
-      "lon": -94.9424
     }
   ]
 }
