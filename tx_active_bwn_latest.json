@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-25T13:29:01.714247",
-  "total_notices": 9,
+  "last_updated": "2026-02-26T13:29:19.413948",
+  "total_notices": 10,
   "notices": [
     {
       "entity_name": "Benbrook Hills",
@@ -15,6 +15,18 @@
       "neighborhood": "Customers may experience little to no water over night while we are looking for a leak. Customers are also being placed under a boil water notice until we get test results back from the lab.",
       "lat": 31.0,
       "lon": -99.0
+    },
+    {
+      "entity_name": "Consolidated WSC - Boil Water Notice 1130033 County Line Area",
+      "entity_type": "Water Supply Corporation (WSC)",
+      "status": "Active",
+      "notice_text": "Boil Water Notice 1130033 County Line Area. February 25, 2026 Due to a water outage for system maintenance, customers in the County Line area need to boil their water until further notice. This area includes customers on CR's 179, 181, 182,183, 184, Anderson CR 1171, and Hwy 287 N between CR 179 and ACR 1171.John Owens 936-544-2986",
+      "date": "February 25, 2026",
+      "source": "Consolidated WSC",
+      "source_url": "https://consolidatedwsc.com/alerts",
+      "entity_url": "https://consolidatedwsc.com/alerts",
+      "lat": 33.8251353,
+      "lon": -102.0275449
     },
     {
       "entity_name": "Consolidated WSC - Boil Water Notice 1130033 Oak Grove Area",
@@ -41,25 +53,25 @@
       "lon": -95.25
     },
     {
-      "entity_name": "Consolidated WSC - Boil Water Notice 1130031 Pine Mountain Area",
-      "entity_type": "Water Supply Corporation (WSC)",
-      "status": "Active",
-      "notice_text": "Boil Water Notice 1130031 Pine Mountain Area. February 18, 2026 Due to a line break, customers on the Pine Mountain system need to boil their water until further notice. This area includes customers on FM 2076 from Loop 304, going West for 4 miles, Hwy 7 between CR 2000 and CR 3020, Hwy 21 from CR 3105, going West for 1 mile, FM 229 from Loop 3",
-      "date": "February 18, 2026",
-      "source": "Consolidated WSC",
-      "source_url": "https://consolidatedwsc.com/alerts",
-      "entity_url": "https://consolidatedwsc.com/alerts",
-      "lat": 31.45,
-      "lon": -95.4
+      "entity_name": "Liberty",
+      "entity_type": "Water System",
+      "status": "Reported Active (News)",
+      "notice_text": "City of Liberty issues boil water notice for portions of water system",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://bluebonnetnews.com/2026/02/25/city-of-liberty-issues-boil-water-notice-for-portions-of-water-system/",
+      "entity_url": "",
+      "lat": 30.0856736,
+      "lon": -94.7856262
     },
     {
       "entity_name": "Unknown (see headline)",
       "entity_type": "Unknown",
       "status": "Reported Active (News)",
-      "notice_text": "Boil water notice issued after Marshall water main break",
+      "notice_text": "Low water pressure prompts boil water notice in Texarkana",
       "date": "",
       "source": "Bing News",
-      "source_url": "https://www.yahoo.com/news/articles/marshall-losing-significant-amount-water-210641792.html",
+      "source_url": "https://www.yahoo.com/news/articles/low-water-pressure-prompts-boil-190451872.html",
       "entity_url": "",
       "lat": 31.0,
       "lon": -99.0
@@ -95,7 +107,7 @@
       "notice_text": "Boil water notice issued for some Llano residents after water main break",
       "date": "",
       "source": "Bing News",
-      "source_url": "https://cbsaustin.com/news/local/boil-water-notice-issued-for-some-llano-residents-after-water-main-break",
+      "source_url": "https://www.msn.com/en-us/news/us/boil-water-notice-issued-for-some-llano-residents-after-water-main-break/ar-AA1WZw0v?ocid=BingNewsVerp",
       "entity_url": "",
       "lat": 30.6663312,
       "lon": -98.6970374
