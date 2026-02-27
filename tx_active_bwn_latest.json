@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-26T13:29:19.413948",
-  "total_notices": 10,
+  "last_updated": "2026-02-27T13:25:50.239964",
+  "total_notices": 9,
   "notices": [
     {
       "entity_name": "Benbrook Hills",
@@ -53,6 +53,18 @@
       "lon": -95.25
     },
     {
+      "entity_name": "Port Arthur",
+      "entity_type": "Water System",
+      "status": "Reported Active (News)",
+      "notice_text": "Boil water notice issued for parts of Port Arthur after main line leak",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://www.12newsnow.com/article/news/local/boil-water-notice-issued-for-parts-of-port-arthur/502-d04baba9-c0ce-48a3-8135-adce00432646",
+      "entity_url": "",
+      "lat": 29.885,
+      "lon": -93.94
+    },
+    {
       "entity_name": "Liberty",
       "entity_type": "Water System",
       "status": "Reported Active (News)",
@@ -99,30 +111,6 @@
       "entity_url": "",
       "lat": 33.4418,
       "lon": -94.0477
-    },
-    {
-      "entity_name": "Llano",
-      "entity_type": "Water System",
-      "status": "Reported Active (News)",
-      "notice_text": "Boil water notice issued for some Llano residents after water main break",
-      "date": "",
-      "source": "Bing News",
-      "source_url": "https://www.msn.com/en-us/news/us/boil-water-notice-issued-for-some-llano-residents-after-water-main-break/ar-AA1WZw0v?ocid=BingNewsVerp",
-      "entity_url": "",
-      "lat": 30.6663312,
-      "lon": -98.6970374
-    },
-    {
-      "entity_name": "Marshall",
-      "entity_type": "Water System",
-      "status": "Reported Active (News)",
-      "notice_text": "Boil water notice issued for some Marshall residents after water main break",
-      "date": "",
-      "source": "Bing News",
-      "source_url": "https://www.kltv.com/2026/02/23/boil-water-notice-issued-some-marshall-residents-after-water-main-break/",
-      "entity_url": "",
-      "lat": 32.5449,
-      "lon": -94.3674
     }
   ]
 }
