@@ -1,56 +1,32 @@
 {
-  "last_updated": "2026-02-27T13:25:50.239964",
-  "total_notices": 9,
+  "last_updated": "2026-02-28T13:14:43.845397",
+  "total_notices": 5,
   "notices": [
     {
       "entity_name": "Benbrook Hills",
       "entity_type": "Water System",
       "status": "Alert",
-      "notice_text": "Tarrant - Customers may experience little to no water over night while we are looking for a leak. Customers are also being placed under a boil water notice until we get test results back from the lab. - Alert",
+      "notice_text": "Tarrant - Customers are placed under a boil water notice until we get test results back from the lab. - Alert",
       "date": "",
       "source": "SWWC Dashboard",
       "source_url": "https://www.swwc.com/texas/neighborhood-dashboard/",
       "entity_url": "",
       "county": "Tarrant",
-      "neighborhood": "Customers may experience little to no water over night while we are looking for a leak. Customers are also being placed under a boil water notice until we get test results back from the lab.",
+      "neighborhood": "Customers are placed under a boil water notice until we get test results back from the lab.",
       "lat": 31.0,
       "lon": -99.0
     },
     {
-      "entity_name": "Consolidated WSC - Boil Water Notice 1130033 County Line Area",
-      "entity_type": "Water Supply Corporation (WSC)",
-      "status": "Active",
-      "notice_text": "Boil Water Notice 1130033 County Line Area. February 25, 2026 Due to a water outage for system maintenance, customers in the County Line area need to boil their water until further notice. This area includes customers on CR's 179, 181, 182,183, 184, Anderson CR 1171, and Hwy 287 N between CR 179 and ACR 1171.John Owens 936-544-2986",
-      "date": "February 25, 2026",
-      "source": "Consolidated WSC",
-      "source_url": "https://consolidatedwsc.com/alerts",
-      "entity_url": "https://consolidatedwsc.com/alerts",
-      "lat": 33.8251353,
-      "lon": -102.0275449
-    },
-    {
-      "entity_name": "Consolidated WSC - Boil Water Notice 1130033 Oak Grove Area",
-      "entity_type": "Water Supply Corporation (WSC)",
-      "status": "Active",
-      "notice_text": "Boil Water Notice 1130033 Oak Grove Area. February 20, 2026 Due to a line break, customers in the Oak Grove area need to boil their water until further notice. This area includes customers on CR 2300 between CR 2330 and 2305, as well as customers on CR's 2330, 2340, and 2345.John Owens 936-544-2986",
-      "date": "February 20, 2026",
-      "source": "Consolidated WSC",
-      "source_url": "https://consolidatedwsc.com/alerts",
-      "entity_url": "https://consolidatedwsc.com/alerts",
-      "lat": 31.4,
-      "lon": -95.5
-    },
-    {
-      "entity_name": "Consolidated WSC - Boil Water Notice 1130033 Tadmor Area",
-      "entity_type": "Water Supply Corporation (WSC)",
-      "status": "Active",
-      "notice_text": "Boil Water Notice 1130033 Tadmor Area. February 20, 2026 Due to a line break, customers in the Tadmor area need to boil their water until further notice. This area includes customer on CR's 1090, 1095, 1100, 1150, PR 5105, and FSR's 513 and 521 W.John Owens 936-544-2986",
-      "date": "February 20, 2026",
-      "source": "Consolidated WSC",
-      "source_url": "https://consolidatedwsc.com/alerts",
-      "entity_url": "https://consolidatedwsc.com/alerts",
-      "lat": 31.35,
-      "lon": -95.25
+      "entity_name": "Unknown (see headline)",
+      "entity_type": "Unknown",
+      "status": "Reported Active (News)",
+      "notice_text": "Port Arthur residents seek clarity after mixed messages on boil water notice",
+      "date": "",
+      "source": "Bing News",
+      "source_url": "https://kfdm.com/news/local/port-arthur-residents-seek-clarity-after-mixed-messages-on-boil-water-notice",
+      "entity_url": "",
+      "lat": 31.0,
+      "lon": -99.0
     },
     {
       "entity_name": "Port Arthur",
@@ -77,18 +53,6 @@
       "lon": -94.7856262
     },
     {
-      "entity_name": "Unknown (see headline)",
-      "entity_type": "Unknown",
-      "status": "Reported Active (News)",
-      "notice_text": "Low water pressure prompts boil water notice in Texarkana",
-      "date": "",
-      "source": "Bing News",
-      "source_url": "https://www.yahoo.com/news/articles/low-water-pressure-prompts-boil-190451872.html",
-      "entity_url": "",
-      "lat": 31.0,
-      "lon": -99.0
-    },
-    {
       "entity_name": "effect for some Llano",
       "entity_type": "Water System",
       "status": "Reported Active (News)",
@@ -99,18 +63,6 @@
       "entity_url": "",
       "lat": 31.0,
       "lon": -99.0
-    },
-    {
-      "entity_name": "Texarkana",
-      "entity_type": "Water System",
-      "status": "Reported Active (News)",
-      "notice_text": "ALERT | Boil water notice issued for part of Texarkana, Texas",
-      "date": "",
-      "source": "Bing News",
-      "source_url": "https://www.texarkanagazette.com/news/2026/feb/24/alert-boil-water-notice-issued-for-part-of/",
-      "entity_url": "",
-      "lat": 33.4418,
-      "lon": -94.0477
     }
   ]
 }
